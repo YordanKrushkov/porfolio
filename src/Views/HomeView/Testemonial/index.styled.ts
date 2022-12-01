@@ -1,18 +1,14 @@
+import { mobile } from '@constants';
 import styled from 'styled-components';
 
-export const TestemonialWrapper = styled.div`
-  width: 100%;
-  padding: 20px 50px;
-  box-sizing: border-box;
-  background-color: ${({ theme }) => theme.colors.primaryColor};
-  box-shadow: 0 0 7px 0.3px rgba(0,0,0,0.2);
-`;
 export const Wrapper = styled.div`
   display: flex;
   padding: 40px;
   background-color: ${({ theme }) => theme.colors.card};
   border-radius: 6px;
   box-sizing: border-box;
+  ${mobile({ padding: '10px' })}
+
 `;
 
 export const TextWrapper = styled.div`
@@ -32,6 +28,8 @@ export const Text = styled.div`
   color: ${({ theme }) => theme.colors.white};
   width: 80%;
   font-style: italic;
+  ${mobile({ width: '90%' })}
+
 `;
 
 export const Person = styled.div`
@@ -55,10 +53,13 @@ export const Possition = styled.div`
 
 export const Image = styled.div`
   min-width: 100px;
+  width: 100px;
   height: 100px;
   border-radius: 50%;
   overflow: hidden;
   box-shadow: ${({ theme }) => theme.styles.boxShadow};
+  ${mobile({ minWidth: '60px', width: '60px', height: '60px' })}
+
     img{
       width: 100%;
       height: 100%;

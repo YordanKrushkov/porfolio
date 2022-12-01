@@ -1,13 +1,14 @@
 import React from 'react';
-import { TestemonialWrapper, Wrapper, Image, TextWrapper, Line, Text, Possition, Person, Name } from './index.styled';
+import { Wrapper, Image, TextWrapper, Line, Text, Possition, Person, Name } from './index.styled';
 import testemonials from './testemonials';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Mousewheel, Autoplay, Pagination, Navigation } from 'swiper';
 import 'swiper/css';
 import { Title } from '../About/index.styled';
+import { SectionWrapper } from '@components';
 const Testemonial: React.FC = () => {
   return (
-    <TestemonialWrapper>
+    <SectionWrapper>
       <Title>Testemonials</Title>
       <Swiper
         modules={[Mousewheel, Autoplay, Pagination, Navigation]}
@@ -43,7 +44,7 @@ const Testemonial: React.FC = () => {
         )}
 
       </Swiper>
-    </TestemonialWrapper>
+    </SectionWrapper>
 
   );
 };

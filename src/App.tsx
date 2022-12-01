@@ -4,6 +4,7 @@ import { Navigation } from '@core';
 import { ROUTES, theme } from '@constants';
 import { ThemeProvider } from 'styled-components';
 import HomePage from '@Pages/Home';
+import Portfolio from '@Pages/Portfolio';
 
 const App: React.FC = () => {
   return (
@@ -12,7 +13,7 @@ const App: React.FC = () => {
         <Navigation />
         <Routes>
           <Route element={<HomePage/>} path={ROUTES.ABOUT_PAGE}/>
-          <Route element={<HomePage/>} path={ROUTES.PORTFOLIO}/>
+          <Route element={<Portfolio/>} path={ROUTES.PORTFOLIO}/>
           <Route element={<HomePage/>} path={ROUTES.CONTACTS}/>
         </Routes>
       </ThemeProvider>

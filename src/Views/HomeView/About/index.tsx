@@ -1,10 +1,11 @@
+import { SectionWrapper } from '@components';
 import React from 'react';
-import { Wrapper, Title, Description, Line, Text } from './index.styled';
+import { Title, Description, Line, Text } from './index.styled';
 import Technologies from './Technologies';
 
 const About: React.FC = () => {
   return (
-    <Wrapper>
+    <SectionWrapper secondary>
       <Title>About</Title>
       <Description>
         <Line/>
@@ -14,7 +15,7 @@ const About: React.FC = () => {
         </Text>
       </Description>
       <Technologies/>
-    </Wrapper>
+    </SectionWrapper>
   );
 };
 
