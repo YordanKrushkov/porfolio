@@ -17,7 +17,7 @@ const Testemonial: React.FC = () => {
 
   };
   return (
-    <SectionWrapper>
+    <SectionWrapper secondary>
       <Title>Testemonials</Title>
       <Swiper
         modules={[Mousewheel, Autoplay, Pagination, Navigation]}
@@ -33,7 +33,7 @@ const Testemonial: React.FC = () => {
       >
         {testemonials.map(x =>
           <SwiperSlide key={x.author} >
-            <Wrapper>
+            <Wrapper testemonial>
               <TextWrapper>
                 <Line/>
                 <Text>

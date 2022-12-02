@@ -17,13 +17,14 @@ export const Title = styled.h1`
 
 export const TechnologiesWrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   flex-wrap: wrap;
   gap: 30px;
   margin: 50px auto;
   justify-content: center;
   white-space: wrap;
   flex-wrap: wrap;
+  width: 80%;
   ${desktop({ gap: '20px', margin: '30px auto', width: '70%', gridTemplateColumns: 'repeat(6, 1fr)' })}
   ${mobile({ gap: '10px', margin: '20px auto', gridTemplateColumns: 'repeat(3, 1fr)' })}
 `;

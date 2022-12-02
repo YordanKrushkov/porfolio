@@ -1,16 +1,25 @@
 import { desktop, mobile } from '@constants';
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.div<{ testemonial?: boolean }>`
   display: flex;
   padding: 40px;
   background-color: ${({ theme }) => theme.colors.card};
   border-radius: 6px;
-  box-sizing: border-box;
+  box-sizing: content-box;
   width: 70%;
   margin: 0 auto;
-  ${desktop({ padding: '30px', minHeight: '350px', minWidth: '900px' })};
-  ${mobile({ padding: '10px', width: 'auto', minWidth: '90%', minHeight: 'auto' })};
+  min-height: 600px;
+
+  ${({ testemonial }) => testemonial
+    ? desktop({ padding: '30px', minHeight: '350px', minWidth: '900px' })
+    : desktop({ padding: '30px', minHeight: '580px', minWidth: '900px' })
+}
+
+  ${({ testemonial }) => testemonial
+    ? mobile({ padding: '10px', width: 'auto', minWidth: '90%', minHeight: '220px' })
+    : mobile({ padding: '10px', width: 'auto', minWidth: '90%', minHeight: '450px' })
+}
 `;
 
 export const TextWrapper = styled.div`
