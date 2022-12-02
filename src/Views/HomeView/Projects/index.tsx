@@ -33,7 +33,7 @@ const Projects: React.FC = () => {
         mousewheel={{ forceToAxis: true }}
         breakpoints={swiperBreakpoints}
         grabCursor
-        speed={1000}
+        speed={1200}
         autoplay={{ disableOnInteraction: false, pauseOnMouseEnter: true }}
         style={{ margin: '30px 0' }}
       >
