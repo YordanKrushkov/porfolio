@@ -7,38 +7,36 @@ export const Wrapper = styled.div<{ justify: string }>`
     justify-content: ${({ justify }) => justify};
     gap: 10px;
     box-sizing: border-box;
-
-    ${({ justify }) => justify === 'center' && mobile({ flexDirection: 'column', alignItems: 'center' })}
+    ${({ justify }) => justify !== 'flex-start' && mobile({ flexDirection: 'column', alignItems: 'center' })}
 `;
 
 export const Description = styled.div`
   width: 80%;
   font-family: 'MontserratExtraLight';
-  font-size: 10px;
+  font-size: 24px;
   color: ${({ theme }) => theme.colors.white};
-
   ${mobile({ fontSize: '8px' })}
 `;
 export const Form = styled.form`
-  width: 50%;
+  width: 45%;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-top: 20px;
-  ${mobile({ width: '80%' })};
+  margin-top: 50px;
+  ${mobile({ width: '80%', marginTop: '20px' })};
 
   input, textarea, button{
     font-family: 'MontserratExtraLight';
-    font-size: 10px;
+    font-size: 24px;
     background-color: ${({ theme }) => theme.colors.primaryColor2};
-    padding: 5px;
+    padding: 10px;
     outline: none;
     box-sizing: border-box;
     color: ${({ theme }) => theme.colors.white};
     &::placeholder{
     color: ${({ theme }) => theme.colors.card};
    }
-  ${mobile({ padding: '10px' })};
+  ${mobile({ padding: '10px', fontSize: '10px' })};
 
   }
 
@@ -46,11 +44,13 @@ export const Form = styled.form`
 export const Input = styled.input`
     width: 100%;
     border: none;
+    min-height: 50px;
 `;
 
 export const TextArea = styled.textarea`
-   min-height: 100px;
+   min-height: 180px;
    resize: none;
+  ${mobile({ minHeight: '100px' })};
 `;
 
 export const Button = styled.button`
@@ -63,7 +63,6 @@ export const Button = styled.button`
     cursor: pointer;
     background-color: ${({ theme }) => theme.colors.accent};
     color: ${({ theme }) => theme.colors.white};
-
    }
 `;
 export const SocialWrapper = styled.div`
@@ -71,26 +70,31 @@ export const SocialWrapper = styled.div`
     display: flex;
     flex-direction: column;
    justify-content: center;
+   width: 40%;
    justify-self: center;
-   margin: 20px 0 0 20px;
-   ${mobile({ margin: '10px' })};
+   margin: 20px auto;
+   ${mobile({ margin: '10px', width: 'auto' })};
 
    p{
     text-align: center;
     font-family: 'MontserratExtraLight';
     font-style: italic;
+    font-size: 36px;
+   ${mobile({ fontSize: 'inherit' })};
    }
 `;
 export const Social = styled.div`
    color: ${({ theme }) => theme.colors.accent};
-    display: flex;
+   display: flex;
    align-self: center;
    justify-content: center;
    justify-self: center;
-   gap: 10px;
-   font-size: 28px;
+   gap: 15px;
    margin-left: 20px;
+   ${mobile({ gap: '10px' })};
    svg{
+      font-size: 46px;
+   ${mobile({ fontSize: '28px' })};
       &:hover{
       cursor: pointer;
       color: ${({ theme }) => theme.colors.white};

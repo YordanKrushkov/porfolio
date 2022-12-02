@@ -1,3 +1,4 @@
+import { mobile } from '@constants';
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
@@ -11,9 +12,10 @@ export const Wrapper = styled.div`
 export const Title = styled.div`
   margin: 10px 0;
   font-family: 'MontserratSemiBold';
-  font-size: 20px;
+  font-size: 56px;
   text-align: start;
   color: ${({ theme }) => theme.colors.white};
+  ${mobile({ fontSize: '20px' })}
 `;
 
 export const Description = styled.div`
@@ -25,17 +27,19 @@ export const Description = styled.div`
 `;
 
 export const Line = styled.div`
-  width: 40px;
+  width: 90px;
   height: 2px;
-  margin: 6px 0;
+  margin: 12px 0;
   background-color: ${({ theme }) => theme.colors.accent};
+  ${mobile({ width: '40px', margin: '6px 0' })}
 `;
 
 export const Text = styled.div`
   width: 80%;
   padding: 0;
   font-family: 'MontserratExtraLight';
-  font-size: 10px;
+  font-size: 24px;
   text-align: left;
   color: ${({ theme }) => theme.colors.white};
+  ${mobile({ fontSize: '10px' })}
 `;

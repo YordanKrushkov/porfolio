@@ -6,23 +6,28 @@ export const WorkWrapper = styled.div`
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
-    gap: 30px;
-    padding: 5px 0;
+    gap: 80px;
+    padding: 10px 0;
+    ${mobile({ gap: '30px', padding: ' 5px 0' })}
 `;
 
 export const Download = styled.div`
     position: absolute;
     top: 20px;
-    right: 20px;
+    right: 40px;
     z-index: 999;
     display: flex;
     align-items: center;
     gap: 5px;
     font-family: 'MontserratExtraLight';
     color: ${({ theme }) => theme.colors.accent};
-    p{
+    ${mobile({ right: '20px' })}
+
+    p, svg{
       padding: 0;
-      font-size: 12px;
+      font-size: 24px;
+    ${mobile({ fontSize: '12px' })}
+
     };
     &:hover{
       cursor: pointer;
@@ -33,7 +38,7 @@ export const Download = styled.div`
 
 export const WorkTitle = styled.div`
     font-family: 'MontserratSemiBold';
-    font-size: 14px;
+    font-size: 24px;
     color: ${({ theme }) => theme.colors.white};
     ${mobile({ fontSize: '12px' })}
 `;
@@ -41,7 +46,7 @@ export const WorkTitle = styled.div`
 export const Company = styled.div`
   margin: 10px 0;
   font-family: 'MontserratExtraLight';
-  font-size: 12px;
+  font-size: 20px;
   color: ${({ theme }) => theme.colors.white};
   ${mobile({ fontSize: '10px' })}
 `;
@@ -49,13 +54,14 @@ export const Company = styled.div`
 export const Description = styled.div`
   width: 80%;
   font-family: 'MontserratExtraLight';
-  font-size: 10px;
+  font-size: 18px;
   color: ${({ theme }) => theme.colors.white};
   ${mobile({ fontSize: '8px' })}
 `;
 
 export const WorkInfoWrapper = styled.div`
-  margin-left: 30px;
+  margin-left: 100px;
+  ${mobile({ marginLeft: '30px' })}
 `;
 
 export const Label = styled.div`
@@ -63,14 +69,16 @@ export const Label = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 90px;
-    width: 90px;
-    height: 30px;
-    padding:0 10px;
+    min-width: 150px;
+    width: 150px;
+    height: 50px;
+    padding:0 20px;
     font-family: 'MontserratExtraLight';
-    font-size: 12px;
+    font-size: 18px;
     background: ${({ theme }) => theme.colors.card};
     color: ${({ theme }) => theme.colors.white};
+    ${mobile({ minWidth: '90px', width: '90px', height: '30px', fontSize: '12px' })}
+
     &::before{
       content: "";
       position: absolute;
@@ -79,8 +87,9 @@ export const Label = styled.div`
       width: 0;
       height: 0;
       border-left: 15px solid ${({ theme }) => theme.colors.card};
-      border-top: 15px solid transparent;
-      border-bottom: 15px solid transparent;
+      border-top: 25px solid transparent;
+      border-bottom: 25px solid transparent;
+    ${mobile({ borderTop: '15px solid transparent', borderBottom: '15px solid transparent' })}
     }
     ${mobile({ fontSize: '10px', width: '60px', minWidth: '60px', padding: '0 5px' })}
 `;

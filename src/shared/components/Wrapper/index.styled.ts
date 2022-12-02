@@ -10,7 +10,7 @@ interface Props {
 export const Wrapper = styled.div<Props>`
   position: relative;
   width: 100%;
-  height: ${({ hero }) => hero && 450}px;
+  height: ${({ hero }) => hero && 950}px;
   padding: 20px 50px;
   box-sizing: border-box;
   background-color: ${({ theme, secondary }) => secondary ? theme.colors.backgroundColor2 : theme.colors.primaryColor};

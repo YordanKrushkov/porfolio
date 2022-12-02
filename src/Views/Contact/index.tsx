@@ -27,8 +27,7 @@ const ContactView: React.FC = () => {
             If you have request or question, don&apos;t hesitate to contact me using the form below
           </Description>
         </Wrapper>
-        <Wrapper justify={'center'}>
-
+        <Wrapper justify={'space-between'}>
           <Form ref={formRef}>
             <Wrapper justify={'center'}>
               <Input type='text' id='name' placeholder='Name'/>

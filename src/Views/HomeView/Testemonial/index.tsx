@@ -30,7 +30,7 @@ const Testemonial: React.FC = () => {
                   {x?.text}
                   <Person>
                     <Name>{x?.author}</Name>
-                    <Possition><Line width={10}/>
+                    <Possition><Line width={30}/>
                       {x?.possition}
                     </Possition>
                   </Person>

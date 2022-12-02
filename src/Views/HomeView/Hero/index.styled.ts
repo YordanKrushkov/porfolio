@@ -11,7 +11,6 @@ export const ImageWrapper = styled.div`
       filter: contrast(100%);
       transform: scaleX(-1);
     };
-
 `;
 
 export const BussinessCard = styled.div`
@@ -37,14 +36,14 @@ export const TitleWrapper = styled.div`
 export const PreTitle = styled.div`
     padding-bottom: 4px;
     font-family: 'MontserratLight';
-    font-size: 18px;
+    font-size: 42px;
     color: ${({ theme }) => theme.colors.white};
     ${mobile({ fontSize: '12px' })}
 `;
 
 export const Name = styled.div`
     font-family: 'MontserratBold';
-    font-size: 30px;
+    font-size: 62px;
     font-weight: 900;
     color: ${({ theme }) => theme.colors.accent};
     ${mobile({ fontSize: '18px' })}
@@ -53,20 +52,21 @@ export const Name = styled.div`
 
 export const JobTitle = styled(PreTitle)`
     font-family: 'MontserratExtraLight';
-    font-size: 14px;
+    font-size: 36px;
     ${mobile({ fontSize: '12px' })}
 
 `;
 
 export const Button = styled.div`
     width: fit-content;
-    margin-top: 20px;
-    padding: 5px 10px;
+    margin-top: 40px;
+    padding: 10px 20px;
     font-family: 'MontserratExtraLight' ;
-    font-size: 14px;
+    font-size: 42px;
     color: ${({ theme }) => theme.colors.accent};
     border: 2px solid ${({ theme }) => theme.colors.accent};
     border-radius: 5px;
+    ${mobile({ fontSize: '14px', marginTop: '20px', padding: '5px 10px' })}
 
     &:hover{
       color: ${({ theme }) => theme.colors.white};
