@@ -18,7 +18,7 @@ export const Wrapper = styled.div<{ testemonial?: boolean }>`
 
   ${({ testemonial }) => testemonial
     ? mobile({ padding: '10px', width: 'auto', minWidth: '90%', minHeight: '220px' })
-    : mobile({ padding: '10px', width: 'auto', minWidth: '90%', minHeight: '450px' })
+    : mobile({ padding: '10px', width: 'auto', minWidth: '90%', minHeight: '460px' })
 }
 `;
 

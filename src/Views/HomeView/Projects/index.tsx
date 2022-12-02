@@ -21,6 +21,9 @@ const Projects: React.FC = () => {
     }
 
   };
+  const goTo = (url: string): void => {
+    window.open(url, '_blank');
+  };
 
   return (
     <SectionWrapper>
@@ -34,11 +37,11 @@ const Projects: React.FC = () => {
         breakpoints={swiperBreakpoints}
         grabCursor
         speed={1200}
-        autoplay={{ disableOnInteraction: false, pauseOnMouseEnter: true }}
+        autoplay={{ disableOnInteraction: false, pauseOnMouseEnter: true, reverseDirection: true }}
         style={{ margin: '30px 0' }}
       >
         <SwiperSlide>
-          <Wrapper>
+          <Wrapper onClick={() => goTo('https://www.hampden.co.uk/')}>
             <Container>
               <ProjectTitle>HAMPDEN</ProjectTitle>
               <Subtitle>DCSL GuideSmiths</Subtitle>
@@ -51,7 +54,7 @@ const Projects: React.FC = () => {
           </Wrapper>
         </SwiperSlide>
         <SwiperSlide>
-          <Wrapper>
+          <Wrapper onClick={() => goTo('https://www.actico.com/')}>
             <Container>
               <ProjectTitle>ACTICO</ProjectTitle>
               <Subtitle>Devision</Subtitle>
@@ -66,10 +69,9 @@ const Projects: React.FC = () => {
           </Wrapper>
         </SwiperSlide>
         <SwiperSlide>
-
           <Wrapper>
             <Container>
-              <ProjectTitle>ROUND APP</ProjectTitle>
+              <ProjectTitle onClick={() => goTo('https://play.google.com/store/apps/details?id=co.agileapp.RoundApp&hl=en&gl=US')}>ROUND APP</ProjectTitle>
               <Subtitle>DCSL GuideSmiths</Subtitle>
               <Image>
                 <img src={round} alt="project3" />
@@ -82,10 +84,9 @@ const Projects: React.FC = () => {
           </Wrapper>
         </SwiperSlide>
         <SwiperSlide>
-
-          <Wrapper>
+          <Wrapper onClick={() => goTo('https://www.codete.com/')}>
             <Container>
-              <ProjectTitle>Codete</ProjectTitle>
+              <ProjectTitle >Codete</ProjectTitle>
               <Subtitle>Devision</Subtitle>
               <Image>
                 <img src={codete} alt="project4" />
@@ -95,7 +96,6 @@ const Projects: React.FC = () => {
             </Container>
           </Wrapper>
         </SwiperSlide>
-
       </Swiper>
     </SectionWrapper>
   );
