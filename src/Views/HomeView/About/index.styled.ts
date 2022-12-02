@@ -1,13 +1,5 @@
-import { mobile } from '@constants';
+import { desktop, mobile } from '@constants';
 import styled from 'styled-components';
-
-export const Wrapper = styled.div`
-  box-sizing: border-box;
-  width: 100%;
-  padding: 20px 50px;
-  background-color: ${({ theme }) => theme.colors.backgroundColor2};
-  box-shadow: 0 0 7px 0.3px rgba(0,0,0,0.2);
-`;
 
 export const Title = styled.div`
   margin: 10px 0;
@@ -15,6 +7,7 @@ export const Title = styled.div`
   font-size: 56px;
   text-align: start;
   color: ${({ theme }) => theme.colors.white};
+  ${desktop({ fontSize: '42px' })}
   ${mobile({ fontSize: '20px' })}
 `;
 
@@ -24,6 +17,7 @@ export const Description = styled.div`
   gap: 8px;
   margin-bottom: 40px;
   box-sizing: border-box;
+
 `;
 
 export const Line = styled.div`
@@ -41,5 +35,6 @@ export const Text = styled.div`
   font-size: 24px;
   text-align: left;
   color: ${({ theme }) => theme.colors.white};
+  ${desktop({ fontSize: '18px', width: '100%' })}
   ${mobile({ fontSize: '10px' })}
 `;

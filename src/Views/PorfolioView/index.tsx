@@ -5,12 +5,13 @@ import Experiance from './experiance';
 import { HiOutlineCloudDownload } from 'react-icons/hi';
 import { Download } from './index.styled';
 import { SectionWrapper } from '@components';
+import cv from '@assets/CV-YordanKrushkov.pdf';
 const PortfolioView: React.FC = () => {
   return (
     <>
       <HeroBanner/>
       <SectionWrapper secondary>
-        <Download>
+        <Download href={cv} download>
           <HiOutlineCloudDownload/>
           <p>Download CV</p>
         </Download>

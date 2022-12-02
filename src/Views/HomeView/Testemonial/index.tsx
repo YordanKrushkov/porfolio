@@ -7,6 +7,15 @@ import 'swiper/css';
 import { Title } from '../About/index.styled';
 import { SectionWrapper } from '@components';
 const Testemonial: React.FC = () => {
+  const swiperBreakpoints = {
+    800: {
+      slidesPerView: 1
+    },
+    1400: {
+      slidesPerView: 1.4
+    }
+
+  };
   return (
     <SectionWrapper>
       <Title>Testemonials</Title>
@@ -14,8 +23,9 @@ const Testemonial: React.FC = () => {
         modules={[Mousewheel, Autoplay, Pagination, Navigation]}
         slidesPerView={1}
         loop
-        spaceBetween={30}
+        spaceBetween={10}
         mousewheel={{ forceToAxis: true }}
+        breakpoints={swiperBreakpoints}
         grabCursor
         speed={1000}
         autoplay={{ disableOnInteraction: false, pauseOnMouseEnter: true }}

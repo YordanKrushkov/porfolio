@@ -56,7 +56,7 @@ export const TextArea = styled.textarea`
 export const Button = styled.button`
    background-color: transparent !important;
    border-color: ${({ theme }) => theme.colors.accent};
-   color: ${({ theme }) => theme.colors.accent};
+   color: ${({ theme }) => theme.colors.accent} !important;
    width: 20%;
    align-self: flex-end;
    &:hover{

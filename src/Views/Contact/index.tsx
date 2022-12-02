@@ -1,7 +1,7 @@
 import { Line, Title } from '@Views/HomeView/About/index.styled';
 import { Description, Wrapper, Form, Input, TextArea, Button, SocialWrapper, Social } from './index.styled';
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedinIn, FaGithub } from 'react-icons/fa';
-
+import emailjs from 'emailjs-com';
 import React, { useRef, useEffect } from 'react';
 import { SectionWrapper } from '@components';
 import HeroBanner from '@Views/HomeView/Hero';
@@ -16,6 +16,17 @@ const ContactView: React.FC = () => {
   const navigateTo = (url: string): void => {
     window.open(url, '_blank');
   };
+
+  const sendEmail = (e: any): void => {
+    e.preventDefault();
+
+    emailjs.sendForm(process.env.REACT_APP_SERVICE_NAME as string, process.env.REACT_APP_TEMPLATE as string, e.target, process.env.REACT_APP_USER as string)
+      .then(() => {
+      }, (error) => {
+        console.log(error.text);
+      });
+    e.target.reset();
+  };
   return (
     <>
       <HeroBanner/>
@@ -28,13 +39,13 @@ const ContactView: React.FC = () => {
           </Description>
         </Wrapper>
         <Wrapper justify={'space-between'}>
-          <Form ref={formRef}>
+          <Form ref={formRef} onSubmit={sendEmail}>
             <Wrapper justify={'center'}>
-              <Input type='text' id='name' placeholder='Name'/>
-              <Input type='email' id='email' placeholder='Email'/>
+              <Input type='text' id='name' name="name" placeholder='Name'/>
+              <Input type='email' id='email' name="email" placeholder='Email'/>
             </Wrapper>
-            <Input type='text' id='subject' placeholder='Subject'/>
-            <TextArea id='message' placeholder='Message'></TextArea>
+            <Input type='text' id='subject' name='subject' placeholder='Subject'/>
+            <TextArea id='message' placeholder='Message' name='message'></TextArea>
             <Button>Send</Button>
           </Form>
           <SocialWrapper>

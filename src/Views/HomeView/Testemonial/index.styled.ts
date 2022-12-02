@@ -1,4 +1,4 @@
-import { mobile } from '@constants';
+import { desktop, mobile } from '@constants';
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
@@ -9,7 +9,8 @@ export const Wrapper = styled.div`
   box-sizing: border-box;
   width: 70%;
   margin: 0 auto;
-  ${mobile({ padding: '10px', width: 'auto' })}
+  ${desktop({ padding: '30px', minHeight: '350px', minWidth: '900px' })};
+  ${mobile({ padding: '10px', width: 'auto', minWidth: '90%', minHeight: 'auto' })};
 `;
 
 export const TextWrapper = styled.div`
@@ -21,8 +22,9 @@ export const Line = styled.div<{ width?: number }>`
   height: 1px;
   margin: 10px;
   background-color: ${({ theme }) => theme.colors.accent};
-  ${mobile({ margin: '5px' })}
-  ${({ width }) => width ? mobile({ width: width - 20 }) : mobile({ width: '40px' })}
+  ${desktop({ margin: '8px' })};
+  ${mobile({ margin: '5px' })};
+  ${({ width }) => width ? mobile({ width: width - 20 }) : mobile({ width: '40px' })};
 `;
 
 export const Text = styled.div`
@@ -31,19 +33,23 @@ export const Text = styled.div`
   color: ${({ theme }) => theme.colors.white};
   width: 90%;
   font-style: italic;
+  ${desktop({ fontSize: '18px' })};
   ${mobile({ width: '90%', fontSize: '10px' })}
 
 `;
 
 export const Person = styled.div`
   margin-top: 10px;
+  ${desktop({ marginTop: '20px' })};
+
 `;
 
 export const Name = styled.div`
   font-family: "MontserratBold";
   font-size: 24px;
   color: ${({ theme }) => theme.colors.white};
-  ${mobile({ fontSize: '10px' })}
+  ${desktop({ fontSize: '20px' })};
+  ${mobile({ fontSize: '10px' })};
 `;
 
 export const Possition = styled.div`
@@ -53,7 +59,8 @@ export const Possition = styled.div`
   font-size: 20px;
   font-style: italic;
   color: ${({ theme }) => theme.colors.white};
-  ${mobile({ fontSize: '8px' })}
+  ${desktop({ fontSize: '18px' })};
+  ${mobile({ fontSize: '8px' })};
 `;
 
 export const Image = styled.div`
@@ -63,7 +70,8 @@ export const Image = styled.div`
   border-radius: 50%;
   overflow: hidden;
   box-shadow: ${({ theme }) => theme.styles.boxShadow};
-  ${mobile({ minWidth: '60px', width: '60px', height: '60px' })}
+  ${desktop({ minWidth: '200px', width: '200px', height: '200px' })};
+  ${mobile({ minWidth: '60px', width: '60px', height: '60px' })};
 
     img{
       width: 100%;

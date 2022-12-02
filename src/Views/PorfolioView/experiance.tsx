@@ -43,7 +43,10 @@ const Experiance: React.FC = () => {
         <WorkWrapper key={x.company}>
           <Label>{x.date}</Label>
           <WorkWrapper>
-            <Line/>
+            <Line>
+              <div></div>
+              <span></span>
+            </Line>
             <WorkInfoWrapper>
               <WorkTitle>{x.title}</WorkTitle>
               <Company>{x.company}</Company>

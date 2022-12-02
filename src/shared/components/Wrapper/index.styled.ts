@@ -1,4 +1,4 @@
-import { mobile } from '@constants';
+import { desktop, mobile } from '@constants';
 import styled from 'styled-components';
 
 interface Props {
@@ -15,6 +15,8 @@ export const Wrapper = styled.div<Props>`
   box-sizing: border-box;
   background-color: ${({ theme, secondary }) => secondary ? theme.colors.backgroundColor2 : theme.colors.primaryColor};
   box-shadow: 0 0 7px 0.3px rgba(0,0,0,0.2);
+
+  ${({ hero }) => hero && desktop({ padding: '20px', height: '700px' })};
   ${({ hero }) => hero && mobile({ padding: '20px', height: '350px' })};
   ${mobile({ padding: '20px' })};
 `;

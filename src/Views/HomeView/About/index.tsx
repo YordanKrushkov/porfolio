@@ -5,7 +5,7 @@ import Technologies from './Technologies';
 
 const About: React.FC = () => {
   return (
-    <SectionWrapper secondary>
+    <SectionWrapper secondary >
       <Title>About</Title>
       <Description>
         <Line/>

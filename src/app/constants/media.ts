@@ -23,7 +23,7 @@ export const laptop: any = (props: any) => {
 };
 export const desktop: any = (props: any) => {
   return css`
-    @media only screen and (max-width: 1200px) {
+    @media only screen and (max-width: 1600px) {
       ${props}
     }
   `;

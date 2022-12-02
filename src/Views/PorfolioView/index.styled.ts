@@ -11,7 +11,7 @@ export const WorkWrapper = styled.div`
     ${mobile({ gap: '30px', padding: ' 5px 0' })}
 `;
 
-export const Download = styled.div`
+export const Download = styled.a`
     position: absolute;
     top: 20px;
     right: 40px;
@@ -40,6 +40,7 @@ export const WorkTitle = styled.div`
     font-family: 'MontserratSemiBold';
     font-size: 24px;
     color: ${({ theme }) => theme.colors.white};
+    ${mobile({ fontSize: '18px' })}
     ${mobile({ fontSize: '12px' })}
 `;
 
@@ -77,7 +78,8 @@ export const Label = styled.div`
     font-size: 18px;
     background: ${({ theme }) => theme.colors.card};
     color: ${({ theme }) => theme.colors.white};
-    ${mobile({ minWidth: '90px', width: '90px', height: '30px', fontSize: '12px' })}
+    ${mobile({ minWidth: '90px', width: '90px', height: '30px', fontSize: '12px' })};
+
 
     &::before{
       content: "";
@@ -101,6 +103,7 @@ export const Line = styled.div`
   height: 100%;
   background-color: ${({ theme }) => theme.colors.white} ;
   box-sizing: content-box;
+
   &::before{
       content: "";
       position: absolute;
