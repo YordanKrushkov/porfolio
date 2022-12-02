@@ -5,6 +5,7 @@ import { ROUTES, theme } from '@constants';
 import { ThemeProvider } from 'styled-components';
 import HomePage from '@Pages/Home';
 import Portfolio from '@Pages/Portfolio';
+import Contact from '@Pages/Contact';
 
 const App: React.FC = () => {
   return (
@@ -14,7 +15,7 @@ const App: React.FC = () => {
         <Routes>
           <Route element={<HomePage/>} path={ROUTES.ABOUT_PAGE}/>
           <Route element={<Portfolio/>} path={ROUTES.PORTFOLIO}/>
-          <Route element={<HomePage/>} path={ROUTES.CONTACTS}/>
+          <Route element={<Contact/>} path={ROUTES.CONTACTS}/>
         </Routes>
       </ThemeProvider>
     </Router>
