@@ -6,6 +6,10 @@ declare module '*.jpg' {
   const path: any;
   export default content;
 };
+declare module '*.jpeg' {
+  const path: any;
+  export default content;
+};
 declare module '*.png' {
   const path: any;
   export default content;

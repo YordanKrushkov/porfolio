@@ -1,9 +1,15 @@
 import { Label, Line, WorkWrapper, WorkInfoWrapper, WorkTitle, Company, Description } from './index.styled';
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 
 const exp = [
   {
     date: 'Ongoing',
+    title: 'REACT DEVELOPER',
+    company: 'WIT EOOD.',
+    description: 'Dynamic IT professional based in Plovdiv, Bulgaria, contributing to a rapidly evolving company specializing in highly innovative IT solutions for global clients. Proficient in working with React, React Native, and Next.js, with a strong focus on enhancing existing web applications and developing new ones to drive exceptional user experiences.'
+  },
+  {
+    date: 'Jan 2023',
     title: 'SOFTWARE ENGENEER',
     company: 'Devision Ltd.',
     description: ` Based in Sofia, Bulgaria. Devision provides custom software and product development services using automated delivery and testing
@@ -33,28 +39,31 @@ const exp = [
     company: 'Cartlands Group/ London Magical Tours (LMT)',
     description: 'Three-month internship focused on front and back end web development, coding and editing websites and blogs.'
   }
-
 ];
 
 const Experiance: React.FC = () => {
+  const formRef = useRef(null);
+  useEffect(() => {
+    if (formRef.current) {
+      (formRef.current as HTMLFormElement).scrollIntoView({ behavior: 'smooth' });
+    }
+  }, []);
   return (
-    <>
-      {exp.map(x =>
+    <div ref={formRef}>
+      {exp.map(x => (
         <WorkWrapper key={x.company}>
           <Label>{x.date}</Label>
           <WorkWrapper>
-            <Line/>
+            <Line />
             <WorkInfoWrapper>
               <WorkTitle>{x.title}</WorkTitle>
               <Company>{x.company}</Company>
-              <Description>
-                {x.description}
-              </Description>
+              <Description>{x.description}</Description>
             </WorkInfoWrapper>
           </WorkWrapper>
         </WorkWrapper>
-      )}
-    </>
+      ))}
+    </div>
   );
 };
 

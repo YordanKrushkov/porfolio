@@ -5,6 +5,8 @@ import { Wrapper } from '../Testemonial/index.styled';
 import hampden from '@assets/images/hampden.png';
 import actico from '@assets/images/actico.png';
 import codete from '@assets/images/codete.png';
+import dope from '@assets/images/dope.png';
+import Tu from '@assets/images/Tu.jpeg';
 import round from '@assets/images/round.jpg';
 import { Container, Image, ProjectTitle, Subtitle, Description } from './index.styled';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -93,6 +95,32 @@ const Projects: React.FC = () => {
               </Image>
               <Description>Trusted partner in software development and IT consulting </Description>
               <Description>Working on the front-end side with technologies such as <span>React, NextJS, Tailwind, Strapi, Docker, Mongo Atlas</span></Description>
+            </Container>
+          </Wrapper>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Wrapper onClick={() => goTo('https://thisisdope.com/')}>
+            <Container>
+              <ProjectTitle >THISISDOPE</ProjectTitle>
+              <Subtitle>WIT EOOD</Subtitle>
+              <Image>
+                <img src={dope} alt="project5" />
+              </Image>
+              <Description>A place to share, rate & talk about dope stuff. </Description>
+              <Description>Working on the front-end side and creating a brand new mobile app with technologies such as <span>React, React Native, NextJS, Native-Base, GraphQL</span></Description>
+            </Container>
+          </Wrapper>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Wrapper onClick={() => goTo('https://tustreams.com/')}>
+            <Container>
+              <ProjectTitle >TUSTREAMS</ProjectTitle>
+              <Subtitle>WIT EOOD</Subtitle>
+              <Image>
+                <img src={Tu} alt="project6" />
+              </Image>
+              <Description>the first digital distribution platform focused on Latin music. </Description>
+              <Description>Working on the front-end side with technologies such as <span>React, NextJS,  React-Query</span></Description>
             </Container>
           </Wrapper>
         </SwiperSlide>
