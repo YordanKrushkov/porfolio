@@ -4,7 +4,6 @@ import { Title, Description, Line, Text } from './index.styled';
 import Technologies from './Technologies';
 
 const About: React.FC = () => {
-
   return (
     <SectionWrapper secondary >
       <Title >About</Title>
