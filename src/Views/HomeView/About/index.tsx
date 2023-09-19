@@ -1,18 +1,13 @@
 import { SectionWrapper } from '@components';
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { Title, Description, Line, Text } from './index.styled';
 import Technologies from './Technologies';
 
 const About: React.FC = () => {
-  const formRef = useRef(null);
-  useEffect(() => {
-    if (formRef.current) {
-      (formRef.current as HTMLFormElement).scrollIntoView({ behavior: 'smooth' });
-    }
-  }, []);
+
   return (
     <SectionWrapper secondary >
-      <Title ref={formRef}>About</Title>
+      <Title >About</Title>
       <Description>
         <Line/>
         <Text>A budding developer with a passion for both technology and the arts, I bring a unique blend of creativity and technical
