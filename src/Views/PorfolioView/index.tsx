@@ -5,7 +5,7 @@ import Experiance from './experiance';
 import { HiOutlineCloudDownload } from 'react-icons/hi';
 import { Download } from './index.styled';
 import { SectionWrapper } from '@components';
-import cv from '@assets/CV2023.pdf';
+import cv from '@assets/Yordan CV.pdf';
 const PortfolioView: React.FC = () => {
   return (
     <>
